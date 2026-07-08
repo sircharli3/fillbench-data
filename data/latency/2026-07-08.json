@@ -1,7 +1,7 @@
 {
   "benchmark": "B1-exchange-rest-latency",
   "script_version": "0.1",
-  "timestamp_utc": "2026-07-08T00:07:02.048953+00:00",
+  "timestamp_utc": "2026-07-08T08:07:01.826871+00:00",
   "region": "us-east",
   "method": "keep-alive HTTPS GET, TLS handshake excluded (see connect_ms)",
   "samples_per_venue": 50,
@@ -13,15 +13,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 18.913,
+      "connect_ms": 16.408,
       "error_detail": null,
       "stats_ms": {
-        "min": 9.61,
-        "p50": 11.58,
-        "p95": 15.06,
-        "p99": 18.36,
-        "max": 20.35,
-        "mean": 12.1
+        "min": 8.98,
+        "p50": 10.88,
+        "p95": 13.07,
+        "p99": 15.75,
+        "max": 17.47,
+        "mean": 11.14
       },
       "us": "yes",
       "label": "Coinbase"
@@ -33,15 +33,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 13.641,
+      "connect_ms": 12.983,
       "error_detail": null,
       "stats_ms": {
-        "min": 18.21,
-        "p50": 21.98,
-        "p95": 46.82,
-        "p99": 94.63,
-        "max": 96.1,
-        "mean": 25.9
+        "min": 17.03,
+        "p50": 18.81,
+        "p95": 23.74,
+        "p99": 59.27,
+        "max": 92.06,
+        "mean": 20.56
       },
       "us": "yes",
       "label": "Kraken"
@@ -53,15 +53,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 27.032,
+      "connect_ms": 29.982,
       "error_detail": null,
       "stats_ms": {
-        "min": 15.71,
-        "p50": 20.76,
-        "p95": 75.8,
-        "p99": 578.51,
-        "max": 1033.79,
-        "mean": 46.96
+        "min": 17.35,
+        "p50": 28.03,
+        "p95": 122.03,
+        "p99": 599.39,
+        "max": 1042.75,
+        "mean": 61.62
       },
       "us": "yes",
       "label": "Gemini"
@@ -73,15 +73,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 46.793,
+      "connect_ms": 44.556,
       "error_detail": null,
       "stats_ms": {
-        "min": 20.97,
-        "p50": 22.17,
-        "p95": 27.35,
-        "p99": 127.69,
-        "max": 130.19,
-        "mean": 26.77
+        "min": 20.77,
+        "p50": 22.36,
+        "p95": 33.47,
+        "p99": 40.54,
+        "max": 46.8,
+        "mean": 23.91
       },
       "us": "yes",
       "label": "Bitstamp"
@@ -93,15 +93,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 12.392,
+      "connect_ms": 10.982,
       "error_detail": null,
       "stats_ms": {
-        "min": 11.09,
-        "p50": 11.73,
-        "p95": 12.95,
-        "p99": 20.15,
-        "max": 25.84,
-        "mean": 12.15
+        "min": 9.74,
+        "p50": 10.7,
+        "p95": 12.66,
+        "p99": 17.54,
+        "max": 17.65,
+        "mean": 11.23
       },
       "us": "yes",
       "label": "Binance.US"
@@ -113,15 +113,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 9.881,
+      "connect_ms": 12.035,
       "error_detail": null,
       "stats_ms": {
-        "min": 217.56,
-        "p50": 241.86,
-        "p95": 259.61,
-        "p99": 261.62,
-        "max": 261.97,
-        "mean": 240.3
+        "min": 224.98,
+        "p50": 239.03,
+        "p95": 673.81,
+        "p99": 918.31,
+        "max": 1126.25,
+        "mean": 289.11
       },
       "us": "yes",
       "label": "OKX"
@@ -133,15 +133,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 16.843,
+      "connect_ms": 14.94,
       "error_detail": null,
       "stats_ms": {
-        "min": 180.53,
-        "p50": 185.4,
-        "p95": 195.69,
-        "p99": 199.75,
-        "max": 201.75,
-        "mean": 186.37
+        "min": 179.78,
+        "p50": 185.22,
+        "p95": 199.57,
+        "p99": 204.39,
+        "max": 205.19,
+        "mean": 187.77
       },
       "us": "yes",
       "label": "Crypto.com"
@@ -153,15 +153,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 13.543,
+      "connect_ms": 15.71,
       "error_detail": null,
       "stats_ms": {
-        "min": 10.03,
-        "p50": 12.18,
-        "p95": 13.94,
-        "p99": 64.36,
-        "max": 109.75,
-        "mean": 14.05
+        "min": 8.31,
+        "p50": 9.43,
+        "p95": 10.86,
+        "p99": 68.72,
+        "max": 123.82,
+        "mean": 11.77
       },
       "us": "no",
       "label": "Bitfinex"
@@ -173,15 +173,15 @@
       "samples_requested": 50,
       "samples_ok": 50,
       "errors": 0,
-      "connect_ms": 11.53,
+      "connect_ms": 11.247,
       "error_detail": null,
       "stats_ms": {
-        "min": 165.63,
-        "p50": 176.77,
-        "p95": 201.5,
-        "p99": 211.9,
-        "max": 213.68,
-        "mean": 180.23
+        "min": 163.72,
+        "p50": 165.97,
+        "p95": 175.66,
+        "p99": 190.56,
+        "max": 193.71,
+        "mean": 167.84
       },
       "us": "no",
       "label": "KuCoin"
