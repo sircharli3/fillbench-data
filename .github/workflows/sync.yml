@@ -1,0 +1,41 @@
+name: Sync data from fillbench.com
+
+# Keeps this public mirror fresh by pulling the already-public benchmark data from
+# the live site once a day. Uses only the built-in GITHUB_TOKEN (no secrets) and only
+# public URLs, so it never touches the private collection pipeline.
+
+on:
+  schedule:
+    - cron: '17 6 * * *'   # daily, ~06:17 UTC
+  workflow_dispatch: {}     # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch published data from fillbench.com
+        run: |
+          set -euo pipefail
+          mkdir -p data/latency
+          curl -fsSL https://fillbench.com/data/latency-history.json -o data/latency/history.json
+          curl -fsSL https://fillbench.com/data/latency-latest.json  -o /tmp/latest.json
+          # Name the latest run by its UTC date so daily snapshots accumulate here too.
+          date="$(python3 -c "import json; print(json.load(open('/tmp/latest.json'))['timestamp_utc'][:10])")"
+          cp /tmp/latest.json "data/latency/${date}.json"
+
+      - name: Commit if changed
+        run: |
+          git config user.name "FillBench Sync"
+          git config user.email "hello@fillbench.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to sync."
+          else
+            git commit -m "chore: sync latency data from fillbench.com"
+            git push
+          fi
