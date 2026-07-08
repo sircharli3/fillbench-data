@@ -1,0 +1,82 @@
+{
+  "benchmark": "B1-exchange-rest-latency",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-07-06T23:53:49.359284+00:00",
+  "region": "github-actions-runner",
+  "method": "keep-alive HTTPS GET, TLS handshake excluded (see connect_ms)",
+  "samples_per_venue": 50,
+  "results": [
+    {
+      "venue": "coinbase",
+      "host": "api.exchange.coinbase.com",
+      "path": "/products/BTC-USD/ticker",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 19.809,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 8.04,
+        "p50": 9.76,
+        "p95": 13.3,
+        "p99": 23.24,
+        "max": 32.07,
+        "mean": 10.43
+      }
+    },
+    {
+      "venue": "kraken",
+      "host": "api.kraken.com",
+      "path": "/0/public/Ticker?pair=XBTUSD",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 18.335,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 13.59,
+        "p50": 17.11,
+        "p95": 21.31,
+        "p99": 35.62,
+        "max": 43.82,
+        "mean": 17.56
+      }
+    },
+    {
+      "venue": "gemini",
+      "host": "api.gemini.com",
+      "path": "/v1/pubticker/btcusd",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 70.641,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 10.95,
+        "p50": 14.62,
+        "p95": 34.08,
+        "p99": 545.41,
+        "max": 1029.89,
+        "mean": 36.33
+      }
+    },
+    {
+      "venue": "bitstamp",
+      "host": "www.bitstamp.net",
+      "path": "/api/v2/ticker/btcusd/",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 183.467,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 2.5,
+        "p50": 3.35,
+        "p95": 95.12,
+        "p99": 100.92,
+        "max": 104.34,
+        "mean": 15.24
+      }
+    }
+  ]
+}
