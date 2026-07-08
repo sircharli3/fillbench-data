@@ -27,7 +27,9 @@ All latency values are in **milliseconds (ms)**. Lower is better.
 | `samples_requested` | Timed requests attempted. |
 | `samples_ok` | Timed requests that returned HTTP 200 with a body. |
 | `errors` | Requests excluded from stats (non-200, timeout, or connection error). |
-| `connect_ms` | One-time DNS + TCP + TLS handshake time, measured once, reported separately from request latency. |
+| `connect_ms` | One-time DNS + TCP + TLS handshake time (median of several handshake samples), reported separately from request latency. |
+| `connect_ms_min` | Fastest of the handshake samples, for reference. |
+| `connect_samples` | How many handshake samples the connect figures are based on. |
 | `error_detail` | First error encountered, if any. |
 | `stats_ms` | Latency percentiles over successful samples: `min`, `p50`, `p95`, `p99`, `max`, `mean`. |
 
