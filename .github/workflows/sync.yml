@@ -21,12 +21,16 @@ jobs:
       - name: Fetch published data from fillbench.com
         run: |
           set -euo pipefail
-          mkdir -p data/latency
-          curl -fsSL https://fillbench.com/data/latency-history.json -o data/latency/history.json
-          curl -fsSL https://fillbench.com/data/latency-latest.json  -o /tmp/latest.json
-          # Name the latest run by its UTC date so daily snapshots accumulate here too.
-          date="$(python3 -c "import json; print(json.load(open('/tmp/latest.json'))['timestamp_utc'][:10])")"
-          cp /tmp/latest.json "data/latency/${date}.json"
+          # Each dataset maps to a public endpoint pair (<name>-history.json / <name>-latest.json)
+          # and a local folder data/<name>/. Add a line here to mirror another benchmark.
+          for name in latency fees fees-sol; do
+            mkdir -p "data/${name}"
+            curl -fsSL "https://fillbench.com/data/${name}-history.json" -o "data/${name}/history.json"
+            curl -fsSL "https://fillbench.com/data/${name}-latest.json"  -o /tmp/latest.json
+            # Name the latest run by its UTC date so daily snapshots accumulate here too.
+            date="$(python3 -c "import json; print(json.load(open('/tmp/latest.json'))['timestamp_utc'][:10])")"
+            cp /tmp/latest.json "data/${name}/${date}.json"
+          done
 
       - name: Commit if changed
         run: |
@@ -36,6 +40,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to sync."
           else
-            git commit -m "chore: sync latency data from fillbench.com"
+            git commit -m "chore: sync benchmark data from fillbench.com (latency + fees + fees-sol)"
             git push
           fi

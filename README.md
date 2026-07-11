@@ -19,6 +19,19 @@ Steady-state REST API latency (p50 / p95 / p99 / mean and TLS connect time) for 
 
 The matching human view, with a p95-over-time chart and per-venue ranking, lives at **[fillbench.com/exchange-api-latency](https://fillbench.com/exchange-api-latency)**.
 
+### B2: Real cost to trade
+
+Total one-way taker cost, in basis points, to market-buy a fixed dollar size on each US exchange: published taker fee + measured half-spread + measured order-book slippage. Measured at two sizes ($10k and $100k). Published for two assets, so you can see how cost changes between a deeply liquid coin and a mid-cap.
+
+| File | What it is |
+|---|---|
+| [`data/fees/YYYY-MM-DD.json`](data/fees/) | One full BTC run per UTC day: per-venue fee, spread, and slippage at each size. |
+| [`data/fees/history.json`](data/fees/history.json) | Rolling daily BTC time series (total cost bps per venue). |
+| [`data/fees-sol/YYYY-MM-DD.json`](data/fees-sol/) | Same, for SOL (the mid-cap case where spread and slippage differ far more by venue). |
+| [`data/fees-sol/history.json`](data/fees-sol/history.json) | Rolling daily SOL time series. |
+
+Human views: **[fillbench.com/exchange-fees](https://fillbench.com/exchange-fees)** (BTC) and **[fillbench.com/exchange-fees-sol](https://fillbench.com/exchange-fees-sol)** (SOL).
+
 ## Field reference
 
 See [DATA_DICTIONARY.md](DATA_DICTIONARY.md) for what every field means.
@@ -31,16 +44,18 @@ Every run executes from the same fixed US East server. That fixed vantage point 
 
 ## Update cadence
 
-The benchmark reruns every 2 hours. This mirror is refreshed from those runs. For the freshest single run, the site always serves it at [fillbench.com/data/latency-latest.json](https://fillbench.com/data/latency-latest.json).
+The benchmarks rerun every 2 hours on the live site. This public mirror is refreshed from those runs once a day. For the freshest single run, the site always serves the latest at [`/data/latency-latest.json`](https://fillbench.com/data/latency-latest.json), [`/data/fees-latest.json`](https://fillbench.com/data/fees-latest.json), and [`/data/fees-sol-latest.json`](https://fillbench.com/data/fees-sol-latest.json).
 
 ## License
 
 Data is released under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE). You are free to use, share, and build on it, including commercially, as long as you give credit.
 
-**Attribution:** "Latency data by FillBench (https://fillbench.com), CC BY 4.0."
+**Attribution:** "Benchmark data by FillBench (https://fillbench.com), CC BY 4.0."
 
 ## Citing this data
 
 > FillBench. "Crypto Exchange REST API Latency Benchmark." https://fillbench.com/exchange-api-latency
+>
+> FillBench. "Real Cost to Trade on US Crypto Exchanges." https://fillbench.com/exchange-fees
 
 Questions or a venue you want added? Open an issue, or see [fillbench.com/contact](https://fillbench.com/contact).

@@ -51,3 +51,41 @@ All latency values are in **milliseconds (ms)**. Lower is better.
 | `history` | Array of daily records, one per UTC day. |
 
 Each `history[]` record: `date`, `timestamp_utc`, `region`, and `venues` (a map of `venue -> { p50, p95, label, us }`).
+
+---
+
+# B2: Real cost to trade (`data/fees/` and `data/fees-sol/`)
+
+All cost values are in **basis points (bps)**. 1 bps = 0.01%, so on a $10,000 order 1 bps = $1. Lower is better.
+
+## Top-level fields (per daily run file, `YYYY-MM-DD.json`)
+
+| Field | Meaning |
+|---|---|
+| `benchmark` | Benchmark id. `B2-cost-to-trade`. |
+| `asset` | The asset traded in this file: `BTC` (in `data/fees/`) or `SOL` (in `data/fees-sol/`). |
+| `script_version` | Version of the measurement script that produced the run. |
+| `timestamp_utc` | ISO 8601 UTC time the run started. |
+| `region` | Where the run executed. `us-east` is the fixed production server. |
+| `method` | One-line description of how cost was measured. |
+| `sizes_usd` | The order sizes (in USD) modeled, e.g. `[10000, 100000]`. |
+| `results` | Array of per-venue measurements (see below). |
+
+## Per-venue fields (`results[]`)
+
+| Field | Meaning |
+|---|---|
+| `venue` / `label` / `host` | Machine id, display name, and measured endpoint host. |
+| `best_bid` / `best_ask` / `mid` | Top-of-book bid, ask, and midpoint at measurement time. |
+| `half_spread_bps` | Half the bid-ask spread in bps: the cost of crossing from mid to the ask. |
+| `taker_fee_bps` | Published base-tier taker fee in bps for this venue. |
+| `fee_as_of` | Date the taker fee was last verified. |
+| `fee_source` | URL of the venue's public fee schedule. |
+| `error_detail` | First error encountered, if any (else `null`). |
+| `sizes` | Map of order size (USD) -> `{ slippage_bps, total_cost_bps }`. |
+
+For each size: `slippage_bps` is the measured order-book slippage to fill that market buy, and `total_cost_bps` = `taker_fee_bps` + `half_spread_bps` + `slippage_bps` (the all-in one-way cost).
+
+## History time series (`history.json`)
+
+Top-level: `benchmark`, `asset`, `description`, `unit` (`basis_points`), `primary_size_usd`, `generated_utc`, and `history` (one record per UTC day). Each `history[]` record has `date`, `timestamp_utc`, `region`, and `venues` (a map of `venue -> { total_cost_bps, half_spread_bps, label }` at the primary size).
