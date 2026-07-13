@@ -32,6 +32,13 @@ jobs:
             cp /tmp/latest.json "data/${name}/${date}.json"
           done
 
+      - name: Regenerate flattened CSV table(s)
+        run: |
+          set -euo pipefail
+          # Tabular mirror of history.json for dataset-platform viewers (Kaggle preview,
+          # Hugging Face dataset viewer + Parquet indexing). Rerun so the CSV never lags.
+          python3 scripts/history_to_csv.py
+
       - name: Commit if changed
         run: |
           git config user.name "FillBench Sync"
