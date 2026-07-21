@@ -1,0 +1,129 @@
+{
+  "benchmark": "B2-cost-to-trade",
+  "asset": "SOL",
+  "script_version": "0.2",
+  "timestamp_utc": "2026-07-21T08:08:33.934670+00:00",
+  "region": "us-east",
+  "method": "public order-book snapshot; total_cost_bps = published taker fee + measured half-spread + measured slippage to market-buy SOL for the notional",
+  "sizes_usd": [
+    10000,
+    100000
+  ],
+  "results": [
+    {
+      "venue": "coinbase",
+      "label": "Coinbase",
+      "host": "api.exchange.coinbase.com",
+      "error_detail": null,
+      "best_bid": 78.44,
+      "best_ask": 78.46,
+      "mid": 78.45,
+      "half_spread_bps": 1.275,
+      "taker_fee_bps": 60,
+      "fee_as_of": "2026-07-10",
+      "fee_source": "https://help.coinbase.com/en/coinbase/trading-and-funding/advanced-trade/advanced-trade-fees",
+      "sizes": {
+        "10000": {
+          "slippage_bps": 0,
+          "total_cost_bps": 61.27
+        },
+        "100000": {
+          "slippage_bps": 2.17,
+          "total_cost_bps": 63.45
+        }
+      }
+    },
+    {
+      "venue": "kraken",
+      "label": "Kraken",
+      "host": "api.kraken.com",
+      "error_detail": null,
+      "best_bid": 78.44,
+      "best_ask": 78.45,
+      "mid": 78.44,
+      "half_spread_bps": 0.637,
+      "taker_fee_bps": 80,
+      "fee_as_of": "2026-07-10",
+      "fee_source": "https://www.kraken.com/features/fee-schedule",
+      "sizes": {
+        "10000": {
+          "slippage_bps": 0,
+          "total_cost_bps": 80.64
+        },
+        "100000": {
+          "slippage_bps": 1.49,
+          "total_cost_bps": 82.13
+        }
+      }
+    },
+    {
+      "venue": "gemini",
+      "label": "Gemini",
+      "host": "api.gemini.com",
+      "error_detail": null,
+      "best_bid": 78.454,
+      "best_ask": 78.455,
+      "mid": 78.45,
+      "half_spread_bps": 0.064,
+      "taker_fee_bps": 120,
+      "fee_as_of": "2026-07-10",
+      "fee_source": "https://www.gemini.com/fees/activetrader-fee-schedule",
+      "sizes": {
+        "10000": {
+          "slippage_bps": 3.18,
+          "total_cost_bps": 123.24
+        },
+        "100000": {
+          "slippage_bps": 18.78,
+          "total_cost_bps": 138.84
+        }
+      }
+    },
+    {
+      "venue": "bitstamp",
+      "label": "Bitstamp",
+      "host": "www.bitstamp.net",
+      "error_detail": null,
+      "best_bid": 78.45,
+      "best_ask": 78.451,
+      "mid": 78.45,
+      "half_spread_bps": 0.064,
+      "taker_fee_bps": 40,
+      "fee_as_of": "2026-07-10",
+      "fee_source": "https://www.bitstamp.net/fee-schedule/",
+      "sizes": {
+        "10000": {
+          "slippage_bps": 0.03,
+          "total_cost_bps": 40.09
+        },
+        "100000": {
+          "slippage_bps": 1,
+          "total_cost_bps": 41.06
+        }
+      }
+    },
+    {
+      "venue": "binanceus",
+      "label": "Binance.US",
+      "host": "api.binance.us",
+      "error_detail": null,
+      "best_bid": 78.45,
+      "best_ask": 78.47,
+      "mid": 78.46,
+      "half_spread_bps": 1.275,
+      "taker_fee_bps": 2,
+      "fee_as_of": "2026-07-10",
+      "fee_source": "https://www.binance.us/fees",
+      "sizes": {
+        "10000": {
+          "slippage_bps": 1.06,
+          "total_cost_bps": 4.33
+        },
+        "100000": {
+          "slippage_bps": 11.37,
+          "total_cost_bps": 14.64
+        }
+      }
+    }
+  ]
+}
