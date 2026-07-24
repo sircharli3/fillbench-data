@@ -4,7 +4,7 @@
   "description": "Daily total one-way taker cost (bps) to market-buy $10,000 of BTC per US crypto exchange: published taker fee + measured half-spread + measured slippage. One record per UTC day.",
   "unit": "basis_points",
   "primary_size_usd": 10000,
-  "generated_utc": "2026-07-23T08:08:33.494390+00:00",
+  "generated_utc": "2026-07-24T08:08:28.792766+00:00",
   "history": [
     {
       "date": "2026-07-10",
@@ -392,21 +392,21 @@
     },
     {
       "date": "2026-07-23",
-      "timestamp_utc": "2026-07-23T08:08:32.762013+00:00",
+      "timestamp_utc": "2026-07-23T22:08:28.391140+00:00",
       "region": "us-east",
       "venues": {
         "coinbase": {
-          "total_cost_bps": 60.27,
+          "total_cost_bps": 60.0,
           "half_spread_bps": 0.001,
           "label": "Coinbase"
         },
         "kraken": {
-          "total_cost_bps": 81.52,
+          "total_cost_bps": 80.37,
           "half_spread_bps": 0.008,
           "label": "Kraken"
         },
         "gemini": {
-          "total_cost_bps": 120.43,
+          "total_cost_bps": 120.0,
           "half_spread_bps": 0.001,
           "label": "Gemini"
         },
@@ -416,8 +416,40 @@
           "label": "Bitstamp"
         },
         "binanceus": {
-          "total_cost_bps": 3.62,
-          "half_spread_bps": 0.456,
+          "total_cost_bps": 2.87,
+          "half_spread_bps": 0.528,
+          "label": "Binance.US"
+        }
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "timestamp_utc": "2026-07-24T08:08:27.652456+00:00",
+      "region": "us-east",
+      "venues": {
+        "coinbase": {
+          "total_cost_bps": 60.33,
+          "half_spread_bps": 0.001,
+          "label": "Coinbase"
+        },
+        "kraken": {
+          "total_cost_bps": 80.09,
+          "half_spread_bps": 0.008,
+          "label": "Kraken"
+        },
+        "gemini": {
+          "total_cost_bps": 120.26,
+          "half_spread_bps": 0.001,
+          "label": "Gemini"
+        },
+        "bitstamp": {
+          "total_cost_bps": 40.0,
+          "half_spread_bps": 0.001,
+          "label": "Bitstamp"
+        },
+        "binanceus": {
+          "total_cost_bps": 3.59,
+          "half_spread_bps": 0.422,
           "label": "Binance.US"
         }
       }
