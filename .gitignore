@@ -1,0 +1,8 @@
+
+# Wallet secrets / mnemonics - NEVER commit these
+.x402-bench-account.txt
+*.mnemonic
+*.seed
+*.secret
+.env
+.env.*
