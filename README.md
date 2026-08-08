@@ -32,6 +32,17 @@ Total one-way taker cost, in basis points, to market-buy a fixed dollar size on 
 
 Human views: **[fillbench.com/exchange-fees](https://fillbench.com/exchange-fees)** (BTC) and **[fillbench.com/exchange-fees-sol](https://fillbench.com/exchange-fees-sol)** (SOL).
 
+### B6: x402 settlement latency (blockchain payment rails)
+
+Measured time for a stablecoin micropayment to reach **true finality** on each x402-supported chain, timed from submit to on-chain finality from a fixed host. This is the settlement leg an x402 pay-per-call incurs. A chain's marketing "block time" is not the same as when a payment is final and irreversible, so we publish the measured number, not the spec. Every payment is a real on-chain transaction (the account and transactions are verifiable on a block explorer).
+
+| File | What it is |
+|---|---|
+| [`data/x402/algorand-YYYY-MM-DD.json`](data/x402/) | One measured run: N real USDC payments on Algorand mainnet, submit-to-finality stats. |
+| [`data/x402/algorand-latest.json`](data/x402/algorand-latest.json) | The latest Algorand run. |
+
+Solana and Base are being added (same method, each measured to that chain's true finality, so the comparison stays apples-to-apples). Human view with the full comparison and on-chain proof: **[fillbench.com/x402-payment-rails](https://fillbench.com/x402-payment-rails)**.
+
 ## Field reference
 
 See [DATA_DICTIONARY.md](DATA_DICTIONARY.md) for what every field means.

@@ -89,3 +89,24 @@ For each size: `slippage_bps` is the measured order-book slippage to fill that m
 ## History time series (`history.json`)
 
 Top-level: `benchmark`, `asset`, `description`, `unit` (`basis_points`), `primary_size_usd`, `generated_utc`, and `history` (one record per UTC day). Each `history[]` record has `date`, `timestamp_utc`, `region`, and `venues` (a map of `venue -> { total_cost_bps, half_spread_bps, label }` at the primary size).
+
+## B6: x402 settlement latency (`data/x402/<chain>-*.json`)
+
+One measured run of a stablecoin micropayment settling on a blockchain, timed from submit to true finality.
+
+| Field | Meaning |
+|---|---|
+| `benchmark` | Benchmark id, e.g. `B6-x402-algorand-settlement`. |
+| `timestamp_utc` | When the run started (ISO 8601). |
+| `network` | `mainnet`. |
+| `caip2` | CAIP-2 chain id (Algorand runs). |
+| `usdc_asa` | USDC asset id on the chain (Algorand: 31566704). |
+| `commitment` | Finality level measured (Solana: `finalized`, its true finality, not soft `confirmed`). |
+| `region` | Where the run was executed from (settlement time is chain-bound, so vantage barely matters). |
+| `method` | One-line description of exactly what was timed. |
+| `amount_usdc` | Payment size (a self-transfer, so no value moved; timing is amount-independent). |
+| `pay_to_self` | Whether the payment was sent to the same account. |
+| `samples_requested` / `samples_ok` / `errors` | Attempted, settled, and failed sample counts. |
+| `stats_ms` | `{ min, p50, p95, p99, max, mean }` settlement time in **milliseconds** over successful samples. |
+
+Note: the ~2.8s figure often quoted for Algorand is its block time; measured submit-to-final settlement is ~2 block times (~5s). We publish the measured value, and the benchmark account + transactions are verifiable on a block explorer.

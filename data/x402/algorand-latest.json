@@ -1,0 +1,23 @@
+{
+  "benchmark": "B6-x402-algorand-settlement",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-08-08T22:46:44.334088+00:00",
+  "network": "mainnet",
+  "caip2": "algorand:wGHE2Pwdvd7S12BL5FaOP20EGYesN73ktiC1qzkkit8=",
+  "usdc_asa": 31566704,
+  "region": "local",
+  "method": "USDC ASA transfer, timed submit -> on-chain confirmation (== finality on Algorand). Settlement leg only, not a full HTTP 402 round-trip.",
+  "amount_usdc": 0.0,
+  "pay_to_self": true,
+  "samples_requested": 50,
+  "samples_ok": 50,
+  "errors": 0,
+  "stats_ms": {
+    "min": 4169.8,
+    "p50": 5202.0,
+    "p95": 5272.3,
+    "p99": 5281.0,
+    "max": 5284.0,
+    "mean": 5185.2
+  }
+}
