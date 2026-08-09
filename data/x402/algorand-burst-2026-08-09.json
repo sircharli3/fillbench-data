@@ -1,0 +1,132 @@
+{
+  "benchmark": "B6b-x402-algorand-burst",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-08-09T19:51:02.060284+00:00",
+  "network": "mainnet",
+  "usdc_asa": 31566704,
+  "account": "4R34YPTB2DFCFKULAEC5NMBT5KMM4KMHJ7YNBZU25NY7Z2J7WKFE2LYPJI",
+  "region": "local",
+  "method": "N concurrent USDC ASA self-transfers, each timed submit -> confirmation (== finality on Algorand). Throughput = settled / (last_final - first_submit). Single account, single public node (realistic single-endpoint burst).",
+  "amount_usdc": 0.0,
+  "pay_to_self": true,
+  "levels": [
+    10,
+    50,
+    100,
+    500
+  ],
+  "runs": [
+    {
+      "concurrency": 10,
+      "submitted": 10,
+      "settled": 10,
+      "success_rate": 1.0,
+      "max_inflight": 6,
+      "fee_microalgo": {
+        "min": 1000,
+        "max": 1000
+      },
+      "blocks_spanned": 2,
+      "first_round": 63913112,
+      "last_round": 63913113,
+      "window_s": 6.233,
+      "throughput_tps": 1.6,
+      "settle_ms": {
+        "min": 3246.9,
+        "p50": 3338.6,
+        "p95": 4743.1,
+        "max": 5835.1,
+        "mean": 3581.4
+      },
+      "admit_ms": {
+        "p50": 227.8,
+        "p95": 363.9,
+        "max": 388.2
+      }
+    },
+    {
+      "concurrency": 50,
+      "submitted": 50,
+      "settled": 50,
+      "success_rate": 1.0,
+      "max_inflight": 6,
+      "fee_microalgo": {
+        "min": 1000,
+        "max": 1000
+      },
+      "blocks_spanned": 3,
+      "first_round": 63913117,
+      "last_round": 63913119,
+      "window_s": 10.64,
+      "throughput_tps": 4.7,
+      "settle_ms": {
+        "min": 3191.2,
+        "p50": 4709.4,
+        "p95": 5617.0,
+        "max": 5798.4,
+        "mean": 4626.2
+      },
+      "admit_ms": {
+        "p50": 1794.9,
+        "p95": 3701.9,
+        "max": 5060.8
+      }
+    },
+    {
+      "concurrency": 100,
+      "submitted": 100,
+      "settled": 100,
+      "success_rate": 1.0,
+      "max_inflight": 6,
+      "fee_microalgo": {
+        "min": 1000,
+        "max": 1000
+      },
+      "blocks_spanned": 5,
+      "first_round": 63913123,
+      "last_round": 63913127,
+      "window_s": 15.9,
+      "throughput_tps": 6.29,
+      "settle_ms": {
+        "min": 2682.2,
+        "p50": 4667.1,
+        "p95": 6328.8,
+        "max": 6803.9,
+        "mean": 4701.1
+      },
+      "admit_ms": {
+        "p50": 4151.1,
+        "p95": 9609.8,
+        "max": 11037.9
+      }
+    },
+    {
+      "concurrency": 500,
+      "submitted": 500,
+      "settled": 500,
+      "success_rate": 1.0,
+      "max_inflight": 6,
+      "fee_microalgo": {
+        "min": 1000,
+        "max": 1000
+      },
+      "blocks_spanned": 20,
+      "first_round": 63913131,
+      "last_round": 63913150,
+      "window_s": 57.19,
+      "throughput_tps": 8.74,
+      "settle_ms": {
+        "min": 2924.6,
+        "p50": 4972.1,
+        "p95": 6451.4,
+        "max": 7354.1,
+        "mean": 5007.8
+      },
+      "admit_ms": {
+        "p50": 26083.9,
+        "p95": 49724.8,
+        "max": 52614.9
+      }
+    }
+  ]
+}

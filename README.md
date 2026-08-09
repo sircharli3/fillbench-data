@@ -40,8 +40,10 @@ Measured time for a stablecoin micropayment to reach **true finality** on each x
 |---|---|
 | [`data/x402/algorand-YYYY-MM-DD.json`](data/x402/) | One measured run: N real USDC payments on Algorand mainnet, submit-to-finality stats. |
 | [`data/x402/algorand-latest.json`](data/x402/algorand-latest.json) | The latest Algorand run. |
+| [`data/x402/algorand-burst-YYYY-MM-DD.json`](data/x402/) | Burst / throughput run: bursts of N concurrent USDC payments (10/50/100/500), each timed submit-to-finality, with per-level throughput, settlement p50/p95, success rate, and fee. |
+| [`data/x402/algorand-burst-latest.json`](data/x402/algorand-burst-latest.json) | The latest Algorand burst run. |
 
-Solana and Base are being added (same method, each measured to that chain's true finality, so the comparison stays apples-to-apples). Human view with the full comparison and on-chain proof: **[fillbench.com/x402-payment-rails](https://fillbench.com/x402-payment-rails)**.
+Solana and Base are being added (same method, each measured to that chain's true finality, so the comparison stays apples-to-apples). Note on the burst data: throughput is capped by a single free public RPC endpoint (HTTP 429 under load), not the chain, so treat `throughput_tps` as a single-free-endpoint figure; the per-payment `settle_ms` (finality) and fixed fee are the chain's own numbers. Human views with full comparison and on-chain proof: settlement **[fillbench.com/x402-payment-rails](https://fillbench.com/x402-payment-rails)**, throughput **[fillbench.com/x402-throughput](https://fillbench.com/x402-throughput)**.
 
 ## Field reference
 
