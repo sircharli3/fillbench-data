@@ -1,6 +1,6 @@
 # FillBench Data
 
-Open, reproducible benchmark data for crypto trading tools and exchange APIs.
+Open, reproducible benchmark data for crypto trading: exchange REST API latency, real cost-to-trade (fee + spread + slippage), and x402 blockchain settlement latency.
 
 **Live site and full context: [fillbench.com](https://fillbench.com)**
 
@@ -34,7 +34,7 @@ Human views: **[fillbench.com/exchange-fees](https://fillbench.com/exchange-fees
 
 ### B6: x402 settlement latency (blockchain payment rails)
 
-Measured time for a stablecoin micropayment to reach **true finality** on each x402-supported chain, timed from submit to on-chain finality from a fixed host. This is the settlement leg an x402 pay-per-call incurs. A chain's marketing "block time" is not the same as when a payment is final and irreversible, so we publish the measured number, not the spec. Every payment is a real on-chain transaction (the account and transactions are verifiable on a block explorer).
+Measured time for a stablecoin micropayment to reach **true finality** on each x402-supported chain, timed from submit to on-chain finality from a fixed host. This is the settlement leg an x402 pay-per-call incurs. A chain's marketing "block time" is not the same as when a payment is final and irreversible, so we publish the measured number, not the spec. This is the on-chain settlement an x402 payment triggers (a real USDC transfer timed to finality), not the full HTTP-402 + facilitator handshake; settlement is the part that differs by chain. Every payment is a real on-chain transaction, verifiable on a block explorer.
 
 | File | What it is |
 |---|---|
@@ -70,5 +70,7 @@ Data is released under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE). 
 > FillBench. "Crypto Exchange REST API Latency Benchmark." https://fillbench.com/exchange-api-latency
 >
 > FillBench. "Real Cost to Trade on US Crypto Exchanges." https://fillbench.com/exchange-fees
+>
+> FillBench. "x402 Settlement Latency by Chain." https://fillbench.com/x402-payment-rails
 
 Questions or a venue you want added? Open an issue, or see [fillbench.com/contact](https://fillbench.com/contact).
