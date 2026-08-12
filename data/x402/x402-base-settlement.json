@@ -1,0 +1,22 @@
+{
+  "benchmark": "B6-x402-base-settlement",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-08-12T21:17:25.461418+00:00",
+  "network": "mainnet",
+  "commitment": "Flashblock preconfirmation (~200ms sequencer sub-block); full L2 block ~2s; HARD Ethereum L1 finality ~15 min later",
+  "region": "us-east",
+  "asset": "USDC",
+  "asset_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "method": "Real USDC ERC-20 self-transfer (0.000001 USDC), timed submit -> transaction receipt. Base streams Flashblock preconfirmations every ~200ms (sequencer sub-blocks), so the receipt an x402 client sees lands in ~200ms; the full L2 block is ~2s and hard Ethereum L1 finality is ~15 min later. Sent sequentially, one mined before the next.",
+  "samples_requested": 50,
+  "samples_ok": 50,
+  "errors": 0,
+  "stats_ms": {
+    "min": 178.3,
+    "p50": 308.3,
+    "p95": 445.2,
+    "p99": 585.3,
+    "max": 705.5,
+    "mean": 290.3
+  }
+}

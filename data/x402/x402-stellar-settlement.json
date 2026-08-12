@@ -1,0 +1,22 @@
+{
+  "benchmark": "B6-x402-stellar-settlement",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-08-12T02:40:22.205794+00:00",
+  "network": "mainnet",
+  "commitment": "ledger-close (deterministic finality)",
+  "region": "us-east",
+  "asset": "USDC",
+  "asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+  "method": "Real USDC self-payment (0.0000001 USDC), timed submit -> ledger close via Horizon's synchronous submit. Ledger close is Stellar's true, deterministic finality (no reorgs). Sent sequentially, one confirmed before the next (also required by the account sequence number).",
+  "samples_requested": 50,
+  "samples_ok": 50,
+  "errors": 0,
+  "stats_ms": {
+    "min": 4075.3,
+    "p50": 5619.8,
+    "p95": 10758.6,
+    "p99": 16162.8,
+    "max": 17984.9,
+    "mean": 6540.3
+  }
+}

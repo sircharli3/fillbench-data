@@ -38,12 +38,10 @@ Measured time for a stablecoin micropayment to reach **true finality** on each x
 
 | File | What it is |
 |---|---|
-| [`data/x402/algorand-YYYY-MM-DD.json`](data/x402/) | One measured run: N real USDC payments on Algorand mainnet, submit-to-finality stats. |
-| [`data/x402/algorand-latest.json`](data/x402/algorand-latest.json) | The latest Algorand run. |
-| [`data/x402/algorand-burst-YYYY-MM-DD.json`](data/x402/) | Burst / throughput run: bursts of N concurrent USDC payments (10/50/100/500), each timed submit-to-finality, with per-level throughput, settlement p50/p95, success rate, and fee. |
-| [`data/x402/algorand-burst-latest.json`](data/x402/algorand-burst-latest.json) | The latest Algorand burst run. |
+| [`data/x402/x402-<chain>-settlement.json`](data/x402/) | Sequential settlement: real USDC payments on `<chain>` mainnet, each timed submit to true finality (min / p50 / p95 / max / mean). |
+| [`data/x402/x402-<chain>-burst.json`](data/x402/) | Burst / throughput: a burst of concurrent USDC payments, with per-payment finality, success rate, how many one wallet lands per block or ledger, and fee under load. |
 
-Solana and Base are being added (same method, each measured to that chain's true finality, so the comparison stays apples-to-apples). Note on the burst data: throughput is capped by a single free public RPC endpoint (HTTP 429 under load), not the chain, so treat `throughput_tps` as a single-free-endpoint figure; the per-payment `settle_ms` (finality) and fixed fee are the chain's own numbers. Human views with full comparison and on-chain proof: settlement **[fillbench.com/x402-payment-rails](https://fillbench.com/x402-payment-rails)**, throughput **[fillbench.com/x402-throughput](https://fillbench.com/x402-throughput)**.
+Published: **Algorand** (settlement + burst), **Solana** (burst), **Stellar** (settlement + burst) and **Base** (settlement + burst), each measured to that chain's true finality so the comparison stays apples-to-apples. **Cardano (ADA)** and **Hedera (HBAR)** are next. Note on Base: it is an optimistic rollup whose ~0.3s sequencer confirm is soft and reversible, so the settlement number is its true Ethereum L1 finality (~15-20 min), not the 0.3s. Note on the burst data: throughput is capped by a single free public RPC endpoint (HTTP 429 under load), not the chain, so treat `throughput_tps` as a single-free-endpoint figure; the per-payment `settle_ms` (finality) and fixed fee are the chain's own numbers. Human views with full comparison and on-chain proof: settlement **[fillbench.com/x402-payment-rails](https://fillbench.com/x402-payment-rails)**, throughput **[fillbench.com/x402-throughput](https://fillbench.com/x402-throughput)**.
 
 ## Field reference
 

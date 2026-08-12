@@ -90,7 +90,7 @@ For each size: `slippage_bps` is the measured order-book slippage to fill that m
 
 Top-level: `benchmark`, `asset`, `description`, `unit` (`basis_points`), `primary_size_usd`, `generated_utc`, and `history` (one record per UTC day). Each `history[]` record has `date`, `timestamp_utc`, `region`, and `venues` (a map of `venue -> { total_cost_bps, half_spread_bps, label }` at the primary size).
 
-## B6: x402 settlement latency (`data/x402/<chain>-*.json`)
+## B6: x402 settlement + burst (`data/x402/x402-<chain>-<test>.json`)
 
 One measured run of a stablecoin micropayment settling on a blockchain, timed from submit to true finality.
 
@@ -110,3 +110,5 @@ One measured run of a stablecoin micropayment settling on a blockchain, timed fr
 | `stats_ms` | `{ min, p50, p95, p99, max, mean }` settlement time in **milliseconds** over successful samples. |
 
 Note: the ~2.8s figure often quoted for Algorand is its block time; measured submit-to-final settlement is ~2 block times (~5s). We publish the measured value, and the benchmark account + transactions are verifiable on a block explorer.
+
+Burst / throughput files (`x402-<chain>-burst.json`) add fields for load: `payments`, `settled`, `submissions`, `wall_seconds`, a throughput figure, `max_payments_in_one_block` (or `_ledger`), `commitment`, and a `per_payment` array. These measure ONE wallet firing a burst, so the packing number is a single-account figure; across many different wallets the chains parallelize. Base reports a soft ~0.3s Flashblock confirm plus its ~15-20 min true L1 finality. Honest per-chain method notes: https://fillbench.com/x402-throughput
