@@ -3,6 +3,7 @@
   "script_version": "0.1",
   "timestamp_utc": "2026-08-12T21:29:55.395575+00:00",
   "network": "mainnet",
+  "account": "0x201448623805e47c2D2b351744eaa60d06E27F35",
   "commitment": "Flashblock preconfirmation (~200ms); full L2 block ~2s; hard Ethereum L1 finality ~15 min later",
   "region": "us-east",
   "asset": "USDC",

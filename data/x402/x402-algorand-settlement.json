@@ -3,6 +3,7 @@
   "script_version": "0.1",
   "timestamp_utc": "2026-08-08T22:46:44.334088+00:00",
   "network": "mainnet",
+  "account": "4R34YPTB2DFCFKULAEC5NMBT5KMM4KMHJ7YNBZU25NY7Z2J7WKFE2LYPJI",
   "caip2": "algorand:wGHE2Pwdvd7S12BL5FaOP20EGYesN73ktiC1qzkkit8=",
   "usdc_asa": 31566704,
   "region": "local",
