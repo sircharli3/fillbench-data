@@ -1,0 +1,22 @@
+{
+  "benchmark": "B6-x402-xrp-settlement",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-08-18T22:12:35.308483+00:00",
+  "network": "mainnet",
+  "account": "rPFnewDEpwSiXGQv4Tyjd1wZP1WHBXNANW",
+  "commitment": "validated-ledger (deterministic finality)",
+  "region": "us-east",
+  "asset": "XRP",
+  "method": "Real 1-drop XRP payment to a second address we also control (XRPL forbids sender == destination, so no self-pay), timed submit -> validated ledger via xrpl-py submit_and_wait. A validated ledger is XRPL's true, deterministic finality (no reorgs, no soft-vs-hard split). Sent sequentially, one validated before the next (also required by the account Sequence number). NOTE: native XRP, not USDC like the other rails; this is the pure native-asset settlement number.",
+  "samples_requested": 50,
+  "samples_ok": 50,
+  "errors": 0,
+  "stats_ms": {
+    "min": 5358.5,
+    "p50": 7111.6,
+    "p95": 7579.7,
+    "p99": 8303.2,
+    "max": 8925.0,
+    "mean": 6622.9
+  }
+}

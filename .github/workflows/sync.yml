@@ -43,6 +43,7 @@ jobs:
             x402-algorand-burst x402-algorand-settlement \
             x402-solana-burst \
             x402-stellar-burst x402-stellar-settlement \
+            x402-xrp-burst x402-xrp-settlement \
             x402-base-burst x402-base-settlement; do
             curl -fsSL "https://fillbench.com/data/${f}.json" -o "data/x402/${f}.json"
           done
