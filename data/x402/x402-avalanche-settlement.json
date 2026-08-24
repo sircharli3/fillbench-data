@@ -1,0 +1,23 @@
+{
+  "benchmark": "B7-x402-avalanche-settlement",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-08-24T17:17:16.715525+00:00",
+  "network": "mainnet",
+  "account": "0x2FaA2a1E0cFfB00beDa7dC182d0270c700a2A7d1",
+  "commitment": "Snowman consensus: an accepted block is deterministically final (irreversible, no reorg), ~1-2s. Single tier, the receipt IS true finality (not a probabilistic soft pre-confirm).",
+  "region": "us-east",
+  "asset": "USDC",
+  "asset_contract": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+  "method": "Real USDC ERC-20 self-transfer (0.000001 USDC), timed submit -> transaction receipt (block acceptance). Avalanche C-Chain runs Snowman consensus, so an accepted block is deterministically final (no reorg): the receipt an x402 client sees is TRUE irreversible finality, not a fast soft pre-confirm. Sent sequentially, one mined before the next.",
+  "samples_requested": 50,
+  "samples_ok": 50,
+  "errors": 0,
+  "stats_ms": {
+    "min": 1245.6,
+    "p50": 1625.7,
+    "p95": 4562.4,
+    "p99": 7409.8,
+    "max": 8783.2,
+    "mean": 1993.0
+  }
+}

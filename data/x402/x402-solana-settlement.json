@@ -1,0 +1,21 @@
+{
+  "benchmark": "B6-x402-solana-settlement",
+  "script_version": "0.1",
+  "timestamp_utc": "2026-08-11T15:22:15.294823+00:00",
+  "network": "mainnet",
+  "account": "AJCUHA6NLAfkYczk5322RnPiWE84NcouiHaZPSc4k2K9",
+  "commitment": "finalized",
+  "region": "us-east",
+  "method": "Memo transaction, timed submit -> finalized (Solana's true finality, not the ~1-2s 'confirmed'). Settlement leg only; minimal tx because finalization time is chain-consensus, not instruction, bound.",
+  "samples_requested": 50,
+  "samples_ok": 50,
+  "errors": 0,
+  "stats_ms": {
+    "min": 13239.4,
+    "p50": 14361.7,
+    "p95": 16036.5,
+    "p99": 16529.7,
+    "max": 16541.6,
+    "mean": 14558.5
+  }
+}

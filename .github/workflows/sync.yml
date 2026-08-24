@@ -35,17 +35,13 @@ jobs:
       - name: Mirror x402 datasets from fillbench.com
         run: |
           set -euo pipefail
-          # x402 benchmarks are per-run snapshot files (not history/latest pairs), one per
-          # chain and test. Mirror each file the site publishes. When a new chain goes live
-          # on fillbench.com (Cardano, Hedera next), add its file names to this list.
+          # x402 benchmarks are per-run snapshot files. The site publishes a manifest of every
+          # x402 file it serves (/data/x402-manifest.json), so we mirror them ALL with no hardcoded
+          # list: a new chain appears automatically once its JSON is live on fillbench.com.
           mkdir -p data/x402
-          for f in \
-            x402-algorand-burst x402-algorand-settlement \
-            x402-solana-burst \
-            x402-stellar-burst x402-stellar-settlement \
-            x402-xrp-burst x402-xrp-settlement \
-            x402-base-burst x402-base-settlement; do
-            curl -fsSL "https://fillbench.com/data/${f}.json" -o "data/x402/${f}.json"
+          curl -fsSL "https://fillbench.com/data/x402-manifest.json" -o /tmp/x402-manifest.json
+          for f in $(jq -r '.files[]' /tmp/x402-manifest.json); do
+            curl -fsSL "https://fillbench.com/data/${f}" -o "data/x402/${f}"
           done
 
       - name: Regenerate flattened CSV table(s)
