@@ -4,7 +4,7 @@
   "description": "Daily total one-way taker cost (bps) to market-buy $10,000 of SOL per US crypto exchange: published taker fee + measured half-spread + measured slippage. One record per UTC day.",
   "unit": "basis_points",
   "primary_size_usd": 10000,
-  "generated_utc": "2026-08-28T18:08:33.789322+00:00",
+  "generated_utc": "2026-08-29T12:08:27.941171+00:00",
   "history": [
     {
       "date": "2026-07-10",
@@ -1544,32 +1544,64 @@
     },
     {
       "date": "2026-08-28",
-      "timestamp_utc": "2026-08-28T18:08:33.178698+00:00",
+      "timestamp_utc": "2026-08-28T22:08:28.916315+00:00",
       "region": "us-east",
       "venues": {
         "coinbase": {
-          "total_cost_bps": 61.24,
-          "half_spread_bps": 0.479,
+          "total_cost_bps": 61.38,
+          "half_spread_bps": 0.482,
           "label": "Coinbase"
         },
         "kraken": {
-          "total_cost_bps": 81.33,
-          "half_spread_bps": 0.479,
+          "total_cost_bps": 80.48,
+          "half_spread_bps": 0.482,
           "label": "Kraken"
         },
         "gemini": {
-          "total_cost_bps": 122.57,
+          "total_cost_bps": 124.43,
+          "half_spread_bps": 4.239,
+          "label": "Gemini"
+        },
+        "bitstamp": {
+          "total_cost_bps": 40.41,
+          "half_spread_bps": 0.337,
+          "label": "Bitstamp"
+        },
+        "binanceus": {
+          "total_cost_bps": 4.72,
+          "half_spread_bps": 1.446,
+          "label": "Binance.US"
+        }
+      }
+    },
+    {
+      "date": "2026-08-29",
+      "timestamp_utc": "2026-08-29T12:08:27.374718+00:00",
+      "region": "us-east",
+      "venues": {
+        "coinbase": {
+          "total_cost_bps": 61.58,
+          "half_spread_bps": 0.483,
+          "label": "Coinbase"
+        },
+        "kraken": {
+          "total_cost_bps": 80.48,
+          "half_spread_bps": 0.483,
+          "label": "Kraken"
+        },
+        "gemini": {
+          "total_cost_bps": 121.03,
           "half_spread_bps": 0.048,
           "label": "Gemini"
         },
         "bitstamp": {
-          "total_cost_bps": 40.57,
-          "half_spread_bps": 0.24,
+          "total_cost_bps": 40.56,
+          "half_spread_bps": 0.048,
           "label": "Bitstamp"
         },
         "binanceus": {
-          "total_cost_bps": 5.55,
-          "half_spread_bps": 1.437,
+          "total_cost_bps": 6.92,
+          "half_spread_bps": 0.967,
           "label": "Binance.US"
         }
       }
