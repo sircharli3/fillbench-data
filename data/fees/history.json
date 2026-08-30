@@ -4,7 +4,7 @@
   "description": "Daily total one-way taker cost (bps) to market-buy $10,000 of BTC per US crypto exchange: published taker fee + measured half-spread + measured slippage. One record per UTC day.",
   "unit": "basis_points",
   "primary_size_usd": 10000,
-  "generated_utc": "2026-08-29T12:08:27.207868+00:00",
+  "generated_utc": "2026-08-30T10:08:25.296938+00:00",
   "history": [
     {
       "date": "2026-07-10",
@@ -1576,7 +1576,7 @@
     },
     {
       "date": "2026-08-29",
-      "timestamp_utc": "2026-08-29T12:08:26.131241+00:00",
+      "timestamp_utc": "2026-08-29T22:08:26.231856+00:00",
       "region": "us-east",
       "venues": {
         "coinbase": {
@@ -1590,8 +1590,8 @@
           "label": "Kraken"
         },
         "gemini": {
-          "total_cost_bps": 120.2,
-          "half_spread_bps": 0.001,
+          "total_cost_bps": 120.07,
+          "half_spread_bps": 0.013,
           "label": "Gemini"
         },
         "bitstamp": {
@@ -1600,8 +1600,40 @@
           "label": "Bitstamp"
         },
         "binanceus": {
-          "total_cost_bps": 3.54,
+          "total_cost_bps": 3.52,
+          "half_spread_bps": 0.436,
+          "label": "Binance.US"
+        }
+      }
+    },
+    {
+      "date": "2026-08-30",
+      "timestamp_utc": "2026-08-30T10:08:24.649825+00:00",
+      "region": "us-east",
+      "venues": {
+        "coinbase": {
+          "total_cost_bps": 60.77,
           "half_spread_bps": 0.001,
+          "label": "Coinbase"
+        },
+        "kraken": {
+          "total_cost_bps": 80.13,
+          "half_spread_bps": 0.006,
+          "label": "Kraken"
+        },
+        "gemini": {
+          "total_cost_bps": 120.12,
+          "half_spread_bps": 0.001,
+          "label": "Gemini"
+        },
+        "bitstamp": {
+          "total_cost_bps": 40.07,
+          "half_spread_bps": 0.001,
+          "label": "Bitstamp"
+        },
+        "binanceus": {
+          "total_cost_bps": 2.88,
+          "half_spread_bps": 0.164,
           "label": "Binance.US"
         }
       }
