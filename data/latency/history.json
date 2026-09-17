@@ -2,7 +2,7 @@
   "benchmark": "B1-exchange-rest-latency",
   "description": "Daily REST API latency (p50 + p95, ms) per crypto exchange over time, measured from a fixed US East server. One record per UTC day.",
   "unit": "milliseconds",
-  "generated_utc": "2026-09-16T10:08:37.558784+00:00",
+  "generated_utc": "2026-09-17T10:08:37.546822+00:00",
   "history": [
     {
       "date": "2026-07-06",
@@ -4307,60 +4307,121 @@
     },
     {
       "date": "2026-09-16",
-      "timestamp_utc": "2026-09-16T10:07:02.146431+00:00",
+      "timestamp_utc": "2026-09-16T22:07:02.147583+00:00",
       "region": "us-east",
       "venues": {
         "coinbase": {
-          "p50": 12.27,
-          "p95": 14.95,
+          "p50": 11.71,
+          "p95": 23.01,
           "label": "Coinbase",
           "us": "yes"
         },
         "kraken": {
-          "p50": 14.66,
-          "p95": 16.74,
+          "p50": 16.94,
+          "p95": 25.03,
           "label": "Kraken",
           "us": "yes"
         },
         "gemini": {
-          "p50": 19.71,
-          "p95": 59.2,
+          "p50": 19.29,
+          "p95": 88.78,
           "label": "Gemini",
           "us": "yes"
         },
         "bitstamp": {
-          "p50": 13.21,
-          "p95": 68.59,
+          "p50": 15.96,
+          "p95": 111.84,
           "label": "Bitstamp",
           "us": "yes"
         },
         "binanceus": {
-          "p50": 147.93,
-          "p95": 152.11,
+          "p50": 150.43,
+          "p95": 155.2,
           "label": "Binance.US",
           "us": "yes"
         },
         "okx": {
-          "p50": 180.77,
-          "p95": 202.69,
+          "p50": 172.54,
+          "p95": 197.09,
           "label": "OKX",
           "us": "yes"
         },
         "cryptocom": {
-          "p50": 184.68,
-          "p95": 387.13,
+          "p50": 189.94,
+          "p95": 213.54,
           "label": "Crypto.com",
           "us": "yes"
         },
         "bitfinex": {
-          "p50": 10.81,
-          "p95": 12.49,
+          "p50": 12.08,
+          "p95": 14.29,
           "label": "Bitfinex",
           "us": "no"
         },
         "kucoin": {
-          "p50": 174.58,
-          "p95": 192.11,
+          "p50": 168.92,
+          "p95": 188.41,
+          "label": "KuCoin",
+          "us": "no"
+        }
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "timestamp_utc": "2026-09-17T10:07:02.177875+00:00",
+      "region": "us-east",
+      "venues": {
+        "coinbase": {
+          "p50": 9.02,
+          "p95": 10.11,
+          "label": "Coinbase",
+          "us": "yes"
+        },
+        "kraken": {
+          "p50": 15.39,
+          "p95": 19.07,
+          "label": "Kraken",
+          "us": "yes"
+        },
+        "gemini": {
+          "p50": 24.05,
+          "p95": 119.89,
+          "label": "Gemini",
+          "us": "yes"
+        },
+        "bitstamp": {
+          "p50": 9.78,
+          "p95": 58.13,
+          "label": "Bitstamp",
+          "us": "yes"
+        },
+        "binanceus": {
+          "p50": 146.46,
+          "p95": 148.52,
+          "label": "Binance.US",
+          "us": "yes"
+        },
+        "okx": {
+          "p50": 180.96,
+          "p95": 202.04,
+          "label": "OKX",
+          "us": "yes"
+        },
+        "cryptocom": {
+          "p50": 196.39,
+          "p95": 372.21,
+          "label": "Crypto.com",
+          "us": "yes"
+        },
+        "bitfinex": {
+          "p50": 8.98,
+          "p95": 11.36,
+          "label": "Bitfinex",
+          "us": "no"
+        },
+        "kucoin": {
+          "p50": 186.42,
+          "p95": 200.88,
           "label": "KuCoin",
           "us": "no"
         }
