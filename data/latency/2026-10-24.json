@@ -1,0 +1,222 @@
+{
+  "benchmark": "B1-exchange-rest-latency",
+  "script_version": "0.2",
+  "timestamp_utc": "2026-10-24T10:07:03.678259+00:00",
+  "region": "us-east",
+  "method": "keep-alive HTTPS GET, TLS handshake excluded (see connect_ms)",
+  "samples_per_venue": 50,
+  "results": [
+    {
+      "venue": "coinbase",
+      "host": "api.exchange.coinbase.com",
+      "path": "/products/BTC-USD/ticker",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 17.137,
+      "connect_ms_min": 14.577,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 9.17,
+        "p50": 10.64,
+        "p95": 14.31,
+        "p99": 19.04,
+        "max": 23.1,
+        "mean": 11.29
+      },
+      "us": "yes",
+      "label": "Coinbase"
+    },
+    {
+      "venue": "kraken",
+      "host": "api.kraken.com",
+      "path": "/0/public/Ticker?pair=XBTUSD",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 19.437,
+      "connect_ms_min": 15.505,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 11,
+        "p50": 12.54,
+        "p95": 51.47,
+        "p99": 87.8,
+        "max": 88.18,
+        "mean": 17.15
+      },
+      "us": "yes",
+      "label": "Kraken"
+    },
+    {
+      "venue": "gemini",
+      "host": "api.gemini.com",
+      "path": "/v1/pubticker/btcusd",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 30.249,
+      "connect_ms_min": 27.568,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 16.97,
+        "p50": 21.18,
+        "p95": 98.24,
+        "p99": 2254.97,
+        "max": 4307.1,
+        "mean": 116.12
+      },
+      "us": "yes",
+      "label": "Gemini"
+    },
+    {
+      "venue": "bitstamp",
+      "host": "www.bitstamp.net",
+      "path": "/api/v2/ticker/btcusd/",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 21.813,
+      "connect_ms_min": 19.432,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 7.58,
+        "p50": 10.23,
+        "p95": 74.79,
+        "p99": 243.01,
+        "max": 368.25,
+        "mean": 23.93
+      },
+      "us": "yes",
+      "label": "Bitstamp"
+    },
+    {
+      "venue": "binanceus",
+      "host": "api.binance.us",
+      "path": "/api/v3/ticker/price?symbol=BTCUSDT",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 9.597,
+      "connect_ms_min": 9.312,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 144.08,
+        "p50": 150.44,
+        "p95": 160.15,
+        "p99": 185.42,
+        "max": 197.21,
+        "mean": 151.43
+      },
+      "us": "yes",
+      "label": "Binance.US"
+    },
+    {
+      "venue": "okx",
+      "host": "www.okx.com",
+      "path": "/api/v5/market/ticker?instId=BTC-USDT",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 11.814,
+      "connect_ms_min": 10.565,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 161.56,
+        "p50": 169.77,
+        "p95": 193.64,
+        "p99": 208.92,
+        "max": 222.82,
+        "mean": 173.62
+      },
+      "us": "yes",
+      "label": "OKX"
+    },
+    {
+      "venue": "cryptocom",
+      "host": "api.crypto.com",
+      "path": "/v2/public/get-ticker?instrument_name=BTC_USDT",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 11.21,
+      "connect_ms_min": 9.935,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 172.49,
+        "p50": 175.75,
+        "p95": 186.77,
+        "p99": 513.14,
+        "max": 811.5,
+        "mean": 189.44
+      },
+      "us": "yes",
+      "label": "Crypto.com"
+    },
+    {
+      "venue": "bitfinex",
+      "host": "api-pub.bitfinex.com",
+      "path": "/v2/ticker/tBTCUSD",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 16.58,
+      "connect_ms_min": 10.536,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 8.43,
+        "p50": 9.68,
+        "p95": 12.03,
+        "p99": 34.65,
+        "max": 54.23,
+        "mean": 10.78
+      },
+      "us": "no",
+      "label": "Bitfinex"
+    },
+    {
+      "venue": "kucoin",
+      "host": "api.kucoin.com",
+      "path": "/api/v1/market/orderbook/level1?symbol=BTC-USDT",
+      "samples_requested": 50,
+      "samples_ok": 50,
+      "errors": 0,
+      "connect_ms": 11.98,
+      "connect_ms_min": 11.428,
+      "connect_samples": 5,
+      "error_detail": null,
+      "stats_ms": {
+        "min": 161,
+        "p50": 171.47,
+        "p95": 189.46,
+        "p99": 216.91,
+        "max": 230.28,
+        "mean": 173.95
+      },
+      "us": "no",
+      "label": "KuCoin"
+    }
+  ],
+  "us_blocked": [
+    {
+      "venue": "binance.com",
+      "label": "Binance.com",
+      "host": "api.binance.com",
+      "http_status": 451
+    },
+    {
+      "venue": "bybit",
+      "label": "Bybit",
+      "host": "api.bybit.com",
+      "http_status": 403
+    }
+  ]
+}
